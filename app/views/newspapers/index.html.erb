@@ -8,13 +8,14 @@
   </div>
 <% end %>
 
-
-<h4>Import!</h4>
+<% if current_user.admin %>
+<h4>Import a new CSV</h4>
   <%= form_tag import_newspapers_path, multipart: true do %>
     <%= file_field_tag :file %>
     <%= submit_tag "Import CSV" %>
     <% end %>
 </div>
+<% end %>
 
 
   <table>

@@ -1,4 +1,14 @@
 
+.navbar {
+  height:50px;
+  border-bottom: 2px solid #000;
+  margin-bottom: 5px;
+}
+
+.login-section {
+  float:right;
+}
+
 
 table {
   margin-top: 25px;

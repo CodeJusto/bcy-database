@@ -1,12 +1,13 @@
 class NewspapersController < ApplicationController
+  before_action :require_login 
+
   def index
     @filter = Newspaper.all
   end
 
   def import
-    # byebug
     Newspaper.import(params[:file])
-    redirect_to root_url, notice: "Import successful"
+    redirect_to newspapers_path, notice: "Import successful"
   end
 
   def filter
@@ -19,7 +20,12 @@ class NewspapersController < ApplicationController
     @newspaper = Newspaper.find(params[:id])
   end
 
-  def home
 
+  private
+
+  def require_login
+    unless current_user
+      redirect_to root_path
+    end
   end
 end

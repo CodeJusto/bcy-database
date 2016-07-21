@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+require 'securerandom'
+
+User.create(email:"justin@curvecommunications.com", password:"password", key: SecureRandom.hex, admin: true)

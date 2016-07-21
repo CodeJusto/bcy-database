@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'pages/index'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   resources :newspapers do 
     collection { post :import }
-    get '/home', to: 'newspapers#home'
   end
 
   namespace :admin do
@@ -15,6 +20,6 @@ Rails.application.routes.draw do
 
   post '/newspapers/filter', to: 'newspapers#filter'
 
-  root to: "newspapers#home"
+  root to: "pages#index"
 
 end

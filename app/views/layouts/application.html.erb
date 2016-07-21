@@ -7,7 +7,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <div class="navbar">
+    <div class="login-section">
+      <% if current_user %>
+        <%= link_to "Logout", session_path(current_user), method: :delete, class: :destroy %>
+      <% end %>
+    </div>
+  </div>
 <%= yield %>
 
 </body>

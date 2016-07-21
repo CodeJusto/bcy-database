@@ -1,0 +1,10 @@
+<h1>Welcome to the BCYCNA newspaper database</h1>
+
+
+<p>To continue, login below</p>
+
+<%= form_tag sessions_path do |f| %>
+  <%= text_field_tag :email %><br>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Submit" %>
+<% end %>

@@ -1,9 +1,18 @@
-<h1>Publication page for <%= @newspaper.publication %></h1>
+<h1><%= @newspaper.publication %></h1>
 
-<%= link_to "Return home", root_path %>
+<%= link_to "Return home", newspapers_path %>
+
+<!-- <table>
+  <tbody>
+    <tr>
+      <td><strong>Publication</strong></td>
+      <td><%= @newspaper.publication%></td>
+    </tr>
+  </tbody>
+</table> -->
+
 
 <div>
-<p><strong>Publication</strong>: <%= @newspaper.publication%></p>
 <p><strong>Phone number</strong>: <%= @newspaper.main_phone%></p>
 <p><strong>Publisher</strong>: <%= @newspaper.publisher%></p>
 <p><strong>Publisher email</strong>: <a href="mailto:<%= @newspaper.publisher_email%>"><%=@newspaper.publisher_email%></a></p>
