@@ -1,10 +1,27 @@
-<h1>Welcome to the BCYCNA newspaper database</h1>
+<div class="container">
 
+    <h1 class="title center">Welcome to the BCYCNA newspaper database</h1>
+        <p class="subtitle center">To continue, login below</p>
 
-<p>To continue, login below</p>
+      
 
-<%= form_tag sessions_path do |f| %>
-  <%= text_field_tag :email %><br>
-  <%= password_field_tag :password %>
-  <%= submit_tag "Submit" %>
-<% end %>
+  <div class="main-form">
+    <div class="box">
+
+        <%= form_tag sessions_path do %>
+          <p class="control">
+            <%= label_tag "Email" %><br>
+            <%= text_field_tag :email, nil, class: "input" %>
+          </p>
+          <p class="control">
+            <%= label_tag "Password" %><br>
+            <%= password_field_tag :password, nil, class: "input" %>
+          </p>
+          <p class="control">
+            <%= submit_tag "Submit", class: "button is-primary center" %>
+          </p>
+        <% end %>
+
+      </div>
+  </div>
+</div>

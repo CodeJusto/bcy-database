@@ -3,14 +3,17 @@
 <head>
   <title>BCYDatabase</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.1.0/css/bulma.css">
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar">
-    <div class="login-section">
+  <div class="nav">
+    <div class="nav-right nav-menu">
       <% if current_user %>
-        <%= link_to "Logout", session_path(current_user), method: :delete, class: :destroy %>
+        <div class="nav-item"><%= link_to "Logout", session_path(current_user), method: :delete, class: :destroy %>
+        </div>
       <% end %>
     </div>
   </div>

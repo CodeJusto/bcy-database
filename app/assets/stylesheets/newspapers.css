@@ -1,18 +1,22 @@
-
-.navbar {
-  height:50px;
-  border-bottom: 2px solid #000;
-  margin-bottom: 5px;
+.nav {
+  margin-bottom: 15px;
 }
 
-.login-section {
-  float:right;
+.center {
+  text-align:center;
 }
 
+.spacer {
+  height:25px;
+}
+
+.main-form {
+  margin-left: 30%;
+  margin-right: 30%;
+
+}
 
 table {
-  margin-top: 25px;
-  text-align:center;
   border-collapse: collapse;
   border:1px solid #000;
   margin-right: auto;
@@ -26,10 +30,29 @@ table thead {
   border-right:1px solid #000;
   font-size:16px;
   font-weight:bold;
+  color:#000;
+
 }
 
+table thead tr td {
+  text-align:center;
+  color:#FFF;
+  font-decoration
+}
 
-tbody td {
+table tbody td {
+  color:#000;
   background-color:#8FBEA9;
   padding:5px;
+  text-align:center;
+}
+
+table tbody {
+  border: 1px solid #000;
+}
+
+table tbody tr td a {
+  color:blue;
+  font-size:16px;
+  text-decoration:underline;
 }

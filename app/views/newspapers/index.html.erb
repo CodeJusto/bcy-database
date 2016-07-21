@@ -1,6 +1,6 @@
 <%= flash[:notice] %>
 
-
+<div class="container">
 <%= form_tag newspapers_path, {class: 'filter'} do %>
   <div class="input-field">
     <label for="search">Search by publication, editor name, or sales manager name.</label>
@@ -17,7 +17,11 @@
 </div>
 <% end %>
 
+<div class="spacer">
+</div>
 
+<div class="columns">
+  <div class="column is-two-thirds is-offset-2">
   <table>
     <thead>
       <tr>
@@ -36,4 +40,5 @@
       <% end %>
     </tbody>
   </table>
-<div>
+</div>
+</div>
