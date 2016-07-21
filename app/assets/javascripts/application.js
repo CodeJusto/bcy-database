@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require_tree .
 
 
@@ -38,6 +37,7 @@
               <td><a href='newspapers/" + newspaper.id + "'>" + newspaper.publication + "</a></td>\
               <td>" + newspaper.editor + "</td>\
               <td>" + newspaper.sales_manager + "</td>\
+              <td>" + newspaper.electoral_district + "</td>\
               </tr>")
           });       
         }

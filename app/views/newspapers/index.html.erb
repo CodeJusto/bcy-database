@@ -1,19 +1,24 @@
-<%= flash[:notice] %>
 
 <div class="container">
-<%= form_tag newspapers_path, {class: 'filter'} do %>
-  <div class="input-field">
-    <label for="search">Search by publication, editor name, or sales manager name.</label>
-    <%= text_field_tag :search %>
+
+<%= flash[:notice] %>
+<h1 class="title center">Welcome to the BCYCNA</h1>
+<%= form_tag newspapers_path, {class: 'filter main-form'} do %>
+  <div class="input-field center">
+    <label for="search">Search by publication, editor name, or sales manager name.</label><br>
+    <%= text_field_tag :search, nil, class: "input" %>
   </div>
 <% end %>
 
 <% if current_user.admin %>
-<h4>Import a new CSV</h4>
-  <%= form_tag import_newspapers_path, multipart: true do %>
-    <%= file_field_tag :file %>
-    <%= submit_tag "Import CSV" %>
-    <% end %>
+<br>
+<div class="center">
+  <span class="title is-5">Import a new CSV</span>
+    <%= form_tag import_newspapers_path, multipart: true do %>
+      <%= file_field_tag :file %>
+      <%= submit_tag "Import CSV", class: "button" %>
+      <% end %>
+  </div>
 </div>
 <% end %>
 
@@ -21,13 +26,14 @@
 </div>
 
 <div class="columns">
-  <div class="column is-two-thirds is-offset-2">
+  <div class="column is-10 is-offset-1">
   <table>
     <thead>
       <tr>
         <td>Publication</td>
         <td>Editor Name</td>
         <td>Sales Manager Name</td>
+        <td>Electoral District</td>
       </tr>
     </thead>
     <tbody>
@@ -36,6 +42,7 @@
           <td><%= link_to newspaper.publication, newspaper_path(newspaper) %></td>
           <td><%=newspaper.editor%></td>
           <td><%=newspaper.sales_manager%></td>
+          <td><%=newspaper.electoral_district%></td>
         </tr>
       <% end %>
     </tbody>

@@ -12,7 +12,7 @@ class NewspapersController < ApplicationController
 
   def filter
     # byebug
-    @filter = Newspaper.where('publication LIKE ? OR sales_manager LIKE ? OR editor LIKE ?', "%" + params[:search] + "%", "%" + params[:search] + "%", "%" + params[:search] + "%")
+    @filter = Newspaper.where('publication LIKE ? OR sales_manager LIKE ? OR editor LIKE ? OR electoral_district LIKE ?', "%" + params[:search] + "%", "%" + params[:search] + "%", "%" + params[:search] + "%", "%" + params[:search] + "%")
     render :json => {newspapers: @filter}
   end
 

@@ -2,10 +2,6 @@ Rails.application.routes.draw do
 
   get 'pages/index'
 
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
   resources :newspapers do 
     collection { post :import }
   end
