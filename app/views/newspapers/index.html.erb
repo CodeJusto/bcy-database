@@ -1,0 +1,38 @@
+<%= flash[:notice] %>
+
+
+<%= form_tag newspapers_path, {class: 'filter'} do %>
+  <div class="input-field">
+    <label for="search">Search by publication, editor name, or sales manager name.</label>
+    <%= text_field_tag :search %>
+  </div>
+<% end %>
+
+
+<h4>Import!</h4>
+  <%= form_tag import_newspapers_path, multipart: true do %>
+    <%= file_field_tag :file %>
+    <%= submit_tag "Import CSV" %>
+    <% end %>
+</div>
+
+
+  <table>
+    <thead>
+      <tr>
+        <td>Publication</td>
+        <td>Editor Name</td>
+        <td>Sales Manager Name</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @filter.each do |newspaper| %>
+        <tr>
+          <td><%= link_to newspaper.publication, newspaper_path(newspaper) %></td>
+          <td><%=newspaper.editor%></td>
+          <td><%=newspaper.sales_manager%></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<div>

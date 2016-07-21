@@ -1,0 +1,21 @@
+<h1>Publication page for <%= @newspaper.publication %></h1>
+
+<%= link_to "Return home", root_path %>
+
+<div>
+<p><strong>Publication</strong>: <%= @newspaper.publication%></p>
+<p><strong>Phone number</strong>: <%= @newspaper.main_phone%></p>
+<p><strong>Publisher</strong>: <%= @newspaper.publisher%></p>
+<p><strong>Publisher email</strong>: <a href="mailto:<%= @newspaper.publisher_email%>"><%=@newspaper.publisher_email%></a></p>
+<p><strong>Editor</strong>: <%= @newspaper.editor%></p>
+<p><strong>Editor email</strong>: <a href="mailto:<%= @newspaper.editor_email%>"><%= @newspaper.editor_email%></a></p>
+<p><strong>Sales manager</strong>: <%= @newspaper.sales_manager%></p>
+<p><strong>Sales manager email</strong>: <a href="mailto:<%= @newspaper.sales_manager_email%>"><%= @newspaper.sales_manager_email%></a></p>
+<p><strong>Website</strong>: <a href="http://<%= @newspaper.website%>"><%= @newspaper.website%></a></p>
+<p><strong>Twitter</strong>: <a href="http://<%= @newspaper.twitter%>"><%= @newspaper.twitter%></a></p>
+<p><strong>Facebook</strong>: <a href="http://<%= @newspaper.facebook%>"><%= @newspaper.facebook%></a></p>
+<p><strong>Ownership</strong>: <%= @newspaper.ownership%></p>
+<p><strong>Publication day</strong>: <%= @newspaper.publication_day%></p>
+<p><strong>Ad deadline</strong>: <%= @newspaper.ad_deadline%></p>
+<p><strong>Electoral district</strong>: <%= @newspaper.electoral_district%></p>
+</div>

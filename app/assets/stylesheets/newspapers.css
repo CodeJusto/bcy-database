@@ -1,0 +1,25 @@
+
+
+table {
+  margin-top: 25px;
+  text-align:center;
+  border-collapse: collapse;
+  border:1px solid #000;
+  margin-right: auto;
+  margin-left:auto;
+}
+table thead {
+  background-color:#1C7854;
+  border-bottom: 3px solid #000;
+  border-top:1px solid #000;
+  border-left:1px solid #000;
+  border-right:1px solid #000;
+  font-size:16px;
+  font-weight:bold;
+}
+
+
+tbody td {
+  background-color:#8FBEA9;
+  padding:5px;
+}
