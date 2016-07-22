@@ -8,4 +8,11 @@
 
 require 'securerandom'
 
-User.create(email:"justin@curvecommunications.com", password:"password", key: SecureRandom.hex, admin: true)
+User.create(email:"justin@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"kerry@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"george@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"heather@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"gina@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"amanda@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"gladys@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)
+User.create(email:"cora@curvecommunications.com", password:"bcycna2016", key: SecureRandom.hex, admin: true)

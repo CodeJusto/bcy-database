@@ -19,6 +19,12 @@
 
   var filter = $('.filter').find('input').val();
 
+    $('.filter').submit(function(e) {
+      console.log('click!')
+      e.preventDefault();
+      e.stopPropagation();
+    });
+
     $('.filter').find('input').keyup(function(e) {
       console.log("Value: " + $(this).val());
       filter = $(this).val();
