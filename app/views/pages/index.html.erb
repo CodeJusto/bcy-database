@@ -1,27 +1,33 @@
 <div class="container">
 
-    <h1 class="title center">Welcome to the BCYCNA newspaper database</h1>
-        <p class="subtitle center">To continue, login below</p>
-
-      
-
+  <div class="box bcy_title center" id="header-box">
+    <span class="title">Welcome to the BCYCNA newspaper database</span>
+  </div>
+  <div class="subtitle-div">
+    <span class="subtitle center">To continue, login below</span>
+  </div>
+       
   <div class="main-form">
-    <div class="box">
-
+    <div>
         <%= form_tag sessions_path do %>
           <p class="control">
             <%= label_tag "Email" %><br>
-            <%= text_field_tag :email, nil, class: "input" %>
+            <%= text_field_tag :email, nil, class: "input is-large" %>
           </p>
           <p class="control">
             <%= label_tag "Password" %><br>
-            <%= password_field_tag :password, nil, class: "input" %>
+            <%= password_field_tag :password, nil, class: "input is-large" %>
           </p>
           <p class="control">
-            <%= submit_tag "Submit", class: "button is-primary center" %>
+            <div class="center-button">
+              <%= submit_tag "Submit", class: "button" %>
+            </div>
           </p>
         <% end %>
 
       </div>
+  </div>
+  <div class="logo">
+    <img src="https://bccommunitynews.com/wp-content/uploads/2016/09/CNA_BCY-logo-2C-1.jpg" />
   </div>
 </div>

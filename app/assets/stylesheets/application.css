@@ -13,3 +13,142 @@
  *= require_tree .
  *= require_self
  */
+
+html { 
+  background: url("https://bccommunitynews.com/wp-content/uploads/2016/09/Screen-Shot-2016-09-26-at-9.09.16-AM.png") no-repeat center center fixed !important; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container {
+  background-color:transparent;
+}
+
+.container > .bcy_title {
+  padding-top:37px;
+  background-color:#008968;
+  border-radius:0px;
+  height:120px;
+}
+
+.bcy_title > .title {
+  font-size: 48px;
+  font-family: 'Proxima Nova Bold', arial, sans-serif;
+  color:#fff;
+  font-weight: bold;
+}
+
+.subtitle-div {
+  width:260px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:40px;
+}
+
+.subtitle-div > span {
+  font-size:24px;
+  font-family: 'Proxima Nova Bold', arial, sans-serif;
+}
+
+.control > .button {
+  margin-top:100px;
+}
+
+.center-button {
+  width:225px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:120px;
+}
+
+.center-button > input {
+  background-color: #008968;
+  width: 225px;
+  border-radius:0px;
+  font-family: 'Proxima Nova Bold', arial, sans-serif;
+  font-weight: bold;
+  font-size:29px;
+  color:#fff;
+  height:50px;
+}
+
+.control > label {
+  font-size:18px;
+}
+
+.control > input.is-large {
+  font-size:36px;
+  line-height:60px;
+  height:60px;
+}
+
+.logo {
+  width:140px;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:30px;
+}
+
+.logo > img {
+  width:140px;
+  height:auto;
+}
+
+@media (max-width:1178px) {
+  .container > .bcy_title {
+    height:170px;
+  }
+
+  .control > input.is-large {
+    line-height:40px;
+    font-size:30px;
+    height:40px;
+  }
+} 
+
+@media (max-width:625px) {
+    .container > .bcy_title {
+    height:200px;
+  }
+
+  .control > input.is-large {
+    line-height:30px;
+    font-size:20px;
+    height:30px;
+  }
+}
+
+@media (max-width:522px) {
+  .bcy_title > .title{
+    font-size:36px;
+  }
+
+  .container > .bcy_title {
+    height:150px;
+  }
+
+  .control > input.is-large {
+    line-height:30px;
+    font-size:16px;
+    height:30px;
+  }
+} 
+
+@media (max-width:483px) {
+  .container > .bcy_title {
+    height:180px;
+  }
+
+  .main-form {
+    margin-top:50px;
+  }
+} 
+
+
+@media (max-width:405px) {
+  .container > .bcy_title {
+    height:220px;
+  }
+} 
