@@ -216,6 +216,7 @@ table thead {
 table thead tr td {
   text-align:center;
   color:#FFF;
+  width:300px;
 }
 
 table tbody td {
